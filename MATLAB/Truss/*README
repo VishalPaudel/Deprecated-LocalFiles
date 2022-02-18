@@ -1,0 +1,102 @@
+*README 
+          -Andy Ruina,  
+           November 29, 2021
+
+
+NUMERICAL SOLUTON OF TRUSSES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This folder of .m files was explained in  Andy's zoom lectures (virtually) at Plaksha on Nov
+29, 2021. Here is a lecture recording:
+
+https://cornell.zoom.us/rec/share/JQ5zD75KWnJJUgNkNY4w2jzeH_D9nbd35GgfP6hp3NthJeuhvJSKtIlwFd-gEWyp.xQWrZGEcBdsnnbFL
+
+This folder concerns computer solution of statically determinate trusses.
+The main function (m-file) is
+
+    trussolver.m
+
+trusssolver.m takes in data from one data file. A data file  creates 4
+matrices that define a 2D truss: 
+    J   joint positions (one row per joint)
+    B   which joints th bars are connected to (one row per bar)
+    R   joints at which reaction forces act and 
+        unit vectors in directions of reaction forces,
+           (one row per scalar reaction)
+    F   applied loads: at which joint and the applied forces
+           (one row per applied load)
+
+From J, B and R a big matrix A is formed.   From F and J a big load matrix
+L is formed. The set of joint equilibrium equations (this is  just 
+acompact writing of the equations from the method of joints) is just
+ 
+         A*T = L
+
+where T is the set of unknown bar tensions and reaction forces.
+
+You find the elements of T (that's what you do when you 'solve trusses') 
+by the Matlab backslash command:
+
+          T = A\L.
+
+T is then a list of numbers, one for each tension and reaction force.
+
+The example data files, each of which describes one truss, are in the files
+
+    data5_5_10a.m
+    data5_5_10d.m  (this one is theoretically interesting various ways)
+    trussdata1.m
+    trussdata2.m  (the example from Andy Ruina's lectur on Nov 29, 2021)
+
+Also, there is a matlab function to draw the trusses:
+
+     drawtruss.m.
+
+Finally, to see what the essense of trusssolver.m, without all of the 
+comments, there is a stripped down version (almost no comments):
+
+    trusssolverstripped.m
+
+Sometimes programs are less intimidating when you see how little there is of
+actual programming. However, if you want to understand it, it is probably much
+easier to learn from the commented version (trusssolver.m)
+
+
+
+STUDY GUIDE
+1) Run trusssolver, reading in trussdata2.m
+2) Understand all of the inputs and outputs
+3) Make a new data file of a simple truss you design and make 
+   sure it gives the right answers.
+4) Understand all of the code in trusssolver.m.  This will take some 
+   patience.  The key is to figure out what things are being entered into
+   which rows an columns of A. 
+5) Try to write trusssolver.m yourself (look at the given code when you  
+   get stuck).
+6) Write trusssolver3D.m and test it with a simple 3D structure.
+
+EXTRA THINGS TO TRY
+7) Design trusses with the following properties (some of these overlap
+   with each other), and see how trusssolver  (first comment out the lines
+   of code that exit the program when # equations ~= # unknowns)
+    a) A truss that has more  equations than unknowns;
+    b) A truss that has fewer equations than unknowns; 
+    c) A truss with non-unique solution;
+    d) A truss with no solution;
+    e) A statically determinate truss with no triangles.
+8) Based on your experiences with trusssolver and drawtruss, change them
+   to give  clearer or more informative output.  For example:
+    a) draw the reaction forces as labeled arrows;
+    b) Show the bar tensions on the drawing;
+    c) Mark zero-force bars;
+    d) Put text output on the drawing.
+    e) draw the bars in color with color indicating tension (say, red) or compression 
+       (say, blue) and line width indicating the size of the tension or compression.
+This kind of thing (8) takes lots of time and is not particularly an engineering skill. But,
+it is satisfying to see the result. And,  spending time on such is at least as productive
+as doomscrolling in Facebook or Tik-Tok or whatever. And, when you are done it does make
+it easier to understand some truss of interest.
+
+
+
+
+
