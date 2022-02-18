@@ -1,4 +1,4 @@
-# localFiles
+# LocalFiles
 **All the different files and learnings on my device.**
 
 > This repository is a result of an advice from Raghav Bhaiya.
