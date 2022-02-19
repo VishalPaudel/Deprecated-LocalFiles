@@ -141,7 +141,7 @@ class TuringMachine:
 
 
 # Switching on the modular monster
-UN_2 = TuringMachine('11')
+UN_2 = TuringMachine('01110')
 
 print(UN_2.turing_on())
 # Rather long(?) proof of the Mr. Turing completeness of python. Just realised, I can apply for passing the turing test!
