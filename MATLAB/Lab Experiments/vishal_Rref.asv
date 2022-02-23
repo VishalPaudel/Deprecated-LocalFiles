@@ -7,31 +7,36 @@ function [m_rref, rank_] = vishal_Rref(m_input)
 
     for index_column = (1:int_columns)
 
+        disp(m_rref)
+
         if index_column > int_columns || index_row > int_rows
             break
         end
 
         temp_max = m_rref(index_row, index_column);
+        disp(temp_max)
 
         for temp_index_row = (index_row: int_rows)
             int_max_row = index_row;
-
-            if abs(m_rref(temp_index_row, index_column)) > abs(temp_max)
+            disp()
+            if abs(m_rref(temp_index_row, index_column)) > temp_max
+                disp('yo')
                 temp_max = m_rref(temp_index_row, index_column);
                 int_max_row = temp_index_row;
             end
         end
-        
+        disp(temp_max)
         if temp_max == 0
             continue
         else
             % changing the columns
             temp_row_holder = m_rref(index_row, :);
+            disp(temp_row_holder)
             m_rref(index_row, :) = m_rref(int_max_row, :);
             m_rref(int_max_row, :) = temp_row_holder;
 
             % reducing the pivot to 1
-            
+            disp(m_rref(index_row, index_column))
             m_rref(index_row, :) = m_rref(index_row, :)/m_rref(index_row, index_column);
 
             % reducing lower elements to zero
