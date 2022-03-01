@@ -1,0 +1,2 @@
+
+disp(factorial(171) - my_factorial(171))
