@@ -74,7 +74,7 @@ def expand_in_base_n(
     return main_str
 
 
-test_instance = expand_in_base_n(2, 5)
+test_instance = expand_in_base_n(2, 65000)
 
 print(test_instance)
 print(eval(test_instance))
