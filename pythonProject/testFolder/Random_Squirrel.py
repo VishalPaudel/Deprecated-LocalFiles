@@ -1,25 +1,46 @@
+import copy
 
-class RandomTree(object):
-
-    def __init__(self):
-        self.top = Nodes(1)
-
-    def run_iterations(self, iterations):
-
-        def __add_nodes():
+import matplotlib.pyplot as plt
+import time
+import numpy
 
 
-    def traverse(self):
+def immortal_rabbit(limit_iterations: int = 200, immortal: bool = False):
+    lst = [1]
 
+    n_i = 0
+    m = 4
+    n_f = 10
 
+    i = 0
 
-class Nodes(object):
+    while i < limit_iterations:
 
-    def __init__(self, node_value: float):
+        i += 1
 
-        self.__node_value = node_value
+        temp_lst = numpy.array([])
+        for k in range(0, i + 1):
 
-    def get_value(self):
+            try:
+                if (k - 1) >= 0:
+                    left_value = lst[k - 1]
+                else:
+                    left_value = 0
 
-        return self.__node_value
+            except IndexError:
+                left_value = 0
+            try:
+                right_value = lst[k]
+            except IndexError:
+                right_value = 0
+
+            temp_lst = numpy.append(temp_lst, [0.5 * left_value + 0.5 * right_value])
+
+        lst = temp_lst
+
+        plt.bar(numpy.linspace(0, len(lst) - 1, len(lst)), lst)
+        plt.draw()
+        plt.pause(0.01)
+        plt.close()
+
 
