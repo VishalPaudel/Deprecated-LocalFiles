@@ -1,9 +1,0 @@
-# ninja log v5
-0	109	1646368867558217039	CMakeFiles/cppProjects.dir/main.c.o	ce9dcf4e6d8f672c
-0	110	1646368867558211455	CMakeFiles/cppProjects.dir/my_file.c.o	3a8de1607f2845ca
-0	350	1646387085439612480	CMakeFiles/cppProjects.dir/my_file.c.o	3a8de1607f2845ca
-350	418	1646387085510117766	cppProjects	89265b35c897a756
-1	342	1646387223479883517	CMakeFiles/cppProjects.dir/main.c.o	ce9dcf4e6d8f672c
-1	345	1646387223485176221	CMakeFiles/cppProjects.dir/my_file.c.o	3a8de1607f2845ca
-345	410	1646387223550282724	cppProjects	89265b35c897a756
-0	333	1646387241466637183	CMakeFiles/cppProjects.dir/main.c.o	ce9dcf4e6d8f672c

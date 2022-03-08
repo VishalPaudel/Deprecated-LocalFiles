@@ -1,0 +1,6 @@
+# ninja log v5
+9	706	1646758851856275964	CMakeFiles/cppProject.dir/happiness_overflow.cpp.o	fe7685f3f41ae91f
+0	88	1646764595194752248	build.ninja	e931b7665a797d68
+1	711	1646757915105450910	CMakeFiles/cppProject.dir/bitwise_shifter.cpp.o	9975e34c91d45313
+1	734	1646764367580503450	CMakeFiles/cppProject.dir/lab_experiments/happiness_overflow.cpp.o	629962345d5a3b27
+734	804	1646764367653166962	cppProject	ad47e0cb6f4a9166
