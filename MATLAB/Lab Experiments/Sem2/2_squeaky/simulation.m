@@ -20,9 +20,6 @@ while current_index > n_i && current_index < n_f
     num_hop = num_hop + 1;
 
     stem(current_index, 1)
-    hold on
-    stem(current_index - 1, 1, "r")
-    hold off
 
     xlim([n_i, n_f - n_i + 1])
     

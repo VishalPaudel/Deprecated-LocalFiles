@@ -3,4 +3,4 @@ project(cppProject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cppProject bitwise_shifter.cpp lab_experiments/sizeof_direct.cpp)
+add_executable(cppProject zlab_experiments/data_overflow_and_portability/happiness_overflow.cpp)

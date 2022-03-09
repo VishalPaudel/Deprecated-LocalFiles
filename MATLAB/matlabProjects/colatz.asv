@@ -1,0 +1,33 @@
+
+prime = 3;
+
+value = 200;
+
+count = 0;
+
+value = prime * value + 1;
+
+value_array = [];
+
+while true
+    if value == 1
+        break
+    elseif mod(value, 2) == 0
+        value = value / 2;
+        count = count + 1;
+
+        
+    else
+        value = prime * value + 1;
+        count = count + 1;
+    end
+
+    value_array(count) = value;
+
+    plot((1:1:count), value_array)
+
+    xlim([0, count + 100])
+    ylim([0, value + 100])
+
+    M(count + 1) = getframe;
+end

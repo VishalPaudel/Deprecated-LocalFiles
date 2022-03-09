@@ -1,6 +1,10 @@
 # ninja log v5
-9	706	1646758851856275964	CMakeFiles/cppProject.dir/happiness_overflow.cpp.o	fe7685f3f41ae91f
-0	88	1646764595194752248	build.ninja	e931b7665a797d68
-1	711	1646757915105450910	CMakeFiles/cppProject.dir/bitwise_shifter.cpp.o	9975e34c91d45313
 1	734	1646764367580503450	CMakeFiles/cppProject.dir/lab_experiments/happiness_overflow.cpp.o	629962345d5a3b27
-734	804	1646764367653166962	cppProject	ad47e0cb6f4a9166
+2	715	1646765477962067469	CMakeFiles/cppProject.dir/bitwise_shifter.cpp.o	9975e34c91d45313
+0	76	1646853695394733983	build.ninja	e931b7665a797d68
+9	706	1646758851856275964	CMakeFiles/cppProject.dir/happiness_overflow.cpp.o	fe7685f3f41ae91f
+715	783	1646765478033922305	cppProject	cf3a122a3f523972
+0	399	1646764994228847848	CMakeFiles/cppProject.dir/lab_experiments/sizeof_direct.cpp.o	655469438295a398
+0	53	1646853695394733983	build.ninja	e931b7665a797d68
+0	2916	1646853698318025001	CMakeFiles/cppProject.dir/lab_experiments/data_overflow_and_portability/happiness_overflow.cpp.o	8b79b05643b10247
+2917	3219	1646853698621727406	cppProject	95e1f0eb70cbf6fd
