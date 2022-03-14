@@ -26,7 +26,7 @@ int main() {
     }
 
     std::cout << "Finished with long int" << std::endl;
- 
+
     long long int ll_start = 1;
 
     for (int i = 0; i < 12; i++) {
