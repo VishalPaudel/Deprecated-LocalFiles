@@ -1,14 +1,17 @@
 # ninja log v5
+9	689	1647320778145731126	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/colatz_hailstone.cpp.o	863d203edcac2513
 8	683	1646929153931522315	CMakeFiles/cppProject.dir/lab_experiments/virahanka_numbers/virahanka_recursive.cpp.o	e7e19fd2c985557
-0	54	1647267322536104138	CMakeFiles/cppProject.dir/main.cpp.o	cda314f17d25f77c
+2	683	1647319651662232191	CMakeFiles/cppProject.dir/main.cpp.o	cda314f17d25f77c
 1	734	1646764367580503450	CMakeFiles/cppProject.dir/lab_experiments/happiness_overflow.cpp.o	629962345d5a3b27
+5	77	1647320880038662223	build.ninja	e931b7665a797d68
 2	715	1646765477962067469	CMakeFiles/cppProject.dir/bitwise_shifter.cpp.o	9975e34c91d45313
+0	399	1646764994228847848	CMakeFiles/cppProject.dir/lab_experiments/sizeof_direct.cpp.o	655469438295a398
 2	729	1646930455238015884	CMakeFiles/cppProject.dir/lab_experiments/virahanka_numbers/virahanka_iterative.cpp.o	a786d51314d682ff
 0	2916	1646853698318025001	CMakeFiles/cppProject.dir/lab_experiments/data_overflow_and_portability/happiness_overflow.cpp.o	8b79b05643b10247
-0	89	1647267662532169067	build.ninja	e931b7665a797d68
 9	706	1646758851856275964	CMakeFiles/cppProject.dir/happiness_overflow.cpp.o	fe7685f3f41ae91f
-54	345	1647267322827413907	cppProject	7d438069ff687be6
-0	399	1646764994228847848	CMakeFiles/cppProject.dir/lab_experiments/sizeof_direct.cpp.o	655469438295a398
-0	70	1647267662532169067	build.ninja	e931b7665a797d68
+683	748	1647319651729980423	cppProject	7d438069ff687be6
 0	358	1647267662900139919	CMakeFiles/cppProject.dir/lab_experiments/byte_representations/devanagri_representation.cpp.o	72020da5b20b294a
-358	432	1647267662975909416	cppProject	cbd752451768fe55
+0	63	1647320880038662223	build.ninja	e931b7665a797d68
+2	241	1647320880285399242	cppProject	1de34bbaaaa82e81
+2	773	1647320981248727836	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/colatz_hailstone.cpp.o	863d203edcac2513
+773	840	1647320981320366184	cppProject	1de34bbaaaa82e81

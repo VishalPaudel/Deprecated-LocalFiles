@@ -3,4 +3,4 @@ project(cppProject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cppProject lab_experiments/byte_representations/devanagri_representation.cpp)
+add_executable(cppProject "lab_experiments/Lab 03/colatz_hailstone.cpp")
