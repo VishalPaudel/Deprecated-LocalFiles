@@ -35,5 +35,5 @@ long long int printHailstones(long long int x) {
 
     }
 
-    return num_lifeSpan;
+    return ++num_lifeSpan;
 }
