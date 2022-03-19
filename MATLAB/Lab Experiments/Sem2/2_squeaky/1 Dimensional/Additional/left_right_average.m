@@ -23,7 +23,7 @@ while average_iterator < average_scope
     while position_iterator < n_f
         % This runs for the positions from 1 to (n_f - 1)
             
-        [~, direction_death] = squeaky(n_f, position_iterator);
+        [~, direction_death] = Q1_A_squeaky_1D(n_f, position_iterator);
         
         if direction_death == -1
             left_lst(position_iterator) = left_lst(position_iterator) + 1;

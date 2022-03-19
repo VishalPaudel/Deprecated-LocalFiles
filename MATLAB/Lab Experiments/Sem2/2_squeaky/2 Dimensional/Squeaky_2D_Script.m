@@ -1,31 +1,32 @@
-% squeaky 2D script
-grid_length = 5;
 
-N = 30;
-n = zeros(N);
+limit_lst = [40, 50];
 
-z = zeros(grid_length+1);
 
-for j = (0:grid_length)
+[X_points, Y_points] = meshgrid((0:limit_lst(1)), (0:limit_lst(2)));
+NUM_DEATH_LST = zeros(limit_lst(2) + 1, limit_lst(1) + 1);
 
-    start_pos_x = j;
 
-    for k = 0:grid_length
+average_scope = 30;
+for average_iterator = (1:average_scope)
+
+    NUM_TEMP = zeros(limit_lst(2) + 1, limit_lst(1) + 1);
+
+    for grid_iterator = (1:((limit_lst(1) + 1) * (limit_lst(2) + 1)))
+    
+        starting_position(1) = X_points(grid_iterator);
+        starting_position(2) = Y_points(grid_iterator);
         
-        start_pos_y = k;
-
-        for i = (1:N)
-            n(i) = Squeaky_2D_Simulator(grid_length, start_pos_x, start_pos_y);
-        end
+            
+        [NUM_DEATH, ~] = Squeaky_2D_Simulator(starting_position, limit_lst);
+    
+        NUM_TEMP(grid_iterator) = NUM_DEATH;
+    
     end
-    avg = mean(n);
-    z(j+1) = avg(1);
+
+    NUM_DEATH_LST = NUM_DEATH_LST + (NUM_TEMP / average_scope);
+
+    surf(X_points, Y_points, NUM_DEATH_LST)
+
+    M(grid_iterator) = getframe();
 
 end
-
-Z = (z);
-
-for i=1:size(z)-1
-    Z = [Z z];
-end
-surf(Z)

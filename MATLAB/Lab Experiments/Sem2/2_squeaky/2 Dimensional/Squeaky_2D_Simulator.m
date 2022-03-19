@@ -1,35 +1,83 @@
 
-function [N] = Squeaky_2D_Simulator(grid_length, start_pos_x, start_pos_y)
-
-    curr_pos_x = start_pos_x;
-    curr_pos_y = start_pos_y;
-
-    N = 1;
-
-    while (curr_pos_x > 0 && curr_pos_x < grid_length && curr_pos_y > 0 && curr_pos_y < grid_length)
-        toss = rand(1);
-
-        if(toss < 0.5)
-            toss = rand(1);
-            if(toss < 0.5)
-                curr_pos_x = curr_pos_x - 1;
+function [num_steps_to_death, directional_death] = Squeaky_2D_Simulator(start_position_lst, limit_lst)
+    
+    num_steps_to_death = 0;
+    
+    directional_death = 0;
+    
+    % Only considering the simple case for equal choices
+    
+    x_position = start_position_lst(1);
+    y_position = start_position_lst(2);
+    
+    x_lim = limit_lst(1);
+    y_lim = limit_lst(2);
+    
+    while (x_position < x_lim && x_position > 0) && (y_position < y_lim && y_position > 0)
+        
+        move_y_or_x = 2 * rand(1) - 1;
+    
+        if move_y_or_x < 0
+            % Moving in x
+    
+            move_select = 2 * rand(1) - 1;
+    
+            if move_select > 0
+                % moving in +ve x direction
+    
+                x_position = x_position + 1;
+                directional_death = 1;
+    
+            elseif move_select < 0
+                % moving in -ve x direction
+    
+                x_position = x_position - 1;
+                directional_death = -1;
+    
             else
-                curr_pos_x = curr_pos_x + 1;
+                disp("This is unexpected!")
+                exit
             end
-
+    
+        elseif move_y_or_x > 0
+            % Moving in y
+    
+            move_select = 2 * rand(1) - 1;
+    
+            if move_select > 0
+                % moving in +ve y direction
+    
+                y_position = y_position + 1;
+                directional_death = 1i;
+    
+            elseif move_select < 0
+                % moving in -ve y direction
+    
+                y_position = y_position - 1;
+                directional_death = -1i;
+    
+            else
+                disp("This is unexpected!")
+                exit
+            end
         else
-            toss = rand(1);
-            if(toss < 0.5)
-                curr_pos_y = curr_pos_y - 1;
-            else
-                curr_pos_y = curr_pos_y + 1;
-            end
+            disp("This is unexpected!")
+            exit
+    
         end
-
-        N = N + 1;
-        scatter(curr_pos_x, curr_pos_y);
-        xlim([0, grid_length])
-        ylim([0, grid_length])
-        %getframe();
+    
+%         plot(x_position, y_position, 'bo')
+% 
+%         xlim([0, x_lim])
+%         ylim([0, y_lim])
+%     
+        num_steps_to_death = num_steps_to_death + 1;
+%     
+%         M(num_steps_to_death) = getframe();
+        
     end
+
+%     fprintf("Death after %d\n through", num_steps_to_death)
+%     disp(directional_death)
+
 end
