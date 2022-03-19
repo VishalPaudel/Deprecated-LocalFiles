@@ -1,2 +1,2 @@
 
-mortal_squirrel(50, 10, 5)
+mortal_squirrel(500, 100, 50)

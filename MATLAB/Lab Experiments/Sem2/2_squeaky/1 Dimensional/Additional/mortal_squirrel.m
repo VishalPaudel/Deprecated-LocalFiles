@@ -15,11 +15,9 @@ function [m_distribution] = mortal_squirrel(num_iterations, island_size, initial
     left_death_lst(iterator) = m_distribution(1);
     right_death_lst(iterator) = m_distribution(end);
 
-
     while iterator < num_iterations
 
         iterator = iterator + 1;
-        disp(m_distribution)
 
         old_distribution = m_distribution(:);
 
@@ -41,13 +39,32 @@ function [m_distribution] = mortal_squirrel(num_iterations, island_size, initial
 %                 fprintf("IN MIDDLE, took %d and %d\n", old_distribution(inner_iterator - 1), old_distribution(inner_iterator + 1));
             end
 
-            left_death_lst(iterator) = m_distribution(1);
-            right_death_lst(inner_iterator) = m_distribution(island_size + 1);
         end
 
-        plot(position_lst, [sum(left_death_lst), m_distribution(1, 2 : island_size - 1), sum(right_death_lst)])
+
+        left_death_lst(iterator) = m_distribution(1);
+        right_death_lst(iterator) = m_distribution(island_size + 1);
+
+%         disp("___")
+% 
+%         disp(sum(left_death_lst))
+% 
+%         disp(m_distribution(1, 2 : island_size))
+% 
+%         disp(sum(right_death_lst))
+% 
+%         disp("___")
+
+        bar(position_lst, [sum(left_death_lst), m_distribution(1, 2 : island_size), sum(right_death_lst)])
+        xlim([0, island_size])
+        ylim([0, 1])
 
         M(iterator - 1) = getframe();
 
     end
+
+    xlabel("The possible position")
+    ylabel("Probability")
+
+    title(sprintf("The probability distribution for island size %d, initial position  %d, Iterated %d times", island_size, initial_position, num_iterations))
 end
