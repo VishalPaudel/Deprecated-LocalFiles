@@ -1,3 +1,4 @@
+
 clc
 clear
 close all
@@ -17,11 +18,11 @@ while average_iterator < average_scope
 
     while position_iterator < n_f
         % This runs for the positions from 1 to (n_f - 1)
-            
+
         [hops, ~] = Q1_A_squeaky_1D(n_f, position_iterator);
 
         hop_lst(position_iterator) = hop_lst(position_iterator) + hops;
-            
+
         position_iterator = position_iterator + 1;
 
     end
