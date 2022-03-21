@@ -3,7 +3,7 @@ clc
 clear
 close all
 
-average_scope = 30;
+average_scope = 300;
 
 n_f = 300;
 
