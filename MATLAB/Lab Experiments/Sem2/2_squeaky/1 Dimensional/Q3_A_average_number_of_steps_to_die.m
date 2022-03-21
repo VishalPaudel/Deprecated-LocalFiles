@@ -2,9 +2,9 @@ clc
 clear
 close all
 
-average_scope = 30;
+average_scope = 300;
 
-n_f = 15;
+n_f = 300;
 
 hop_lst(1, n_f - 1) = 0;
 
@@ -26,14 +26,12 @@ while average_iterator < average_scope
 
     end
 
-    plot((1:n_f - 1), hop_lst / average_scope)
-
-    xlim([0, n_f])
-
-    M(position_iterator) = getframe();
-
     average_iterator = average_iterator + 1;
 end
+
+plot((1:n_f - 1), hop_lst / average_scope)
+
+xlim([0, n_f])
 
 title(sprintf("Graph for %d sized island and %d times averaging", n_f, average_scope))
 xlabel("The initial positions")

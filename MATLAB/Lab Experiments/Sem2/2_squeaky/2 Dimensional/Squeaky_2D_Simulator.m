@@ -70,9 +70,9 @@ function [num_steps_to_death, directional_death] = Squeaky_2D_Simulator(start_po
 % 
 %         xlim([0, x_lim])
 %         ylim([0, y_lim])
-%     
+    
         num_steps_to_death = num_steps_to_death + 1;
-%     
+    
 %         M(num_steps_to_death) = getframe();
         
     end
