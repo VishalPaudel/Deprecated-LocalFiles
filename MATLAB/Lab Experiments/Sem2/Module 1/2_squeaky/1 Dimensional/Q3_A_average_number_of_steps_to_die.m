@@ -5,7 +5,7 @@ close all
 
 average_scope = 300;
 
-n_f = 300;
+n_f = 30;
 
 hop_lst(1, n_f - 1) = 0;
 

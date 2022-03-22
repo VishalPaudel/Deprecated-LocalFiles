@@ -3,9 +3,9 @@ clc
 clear
 close all
 
-average_scope = 300;
+average_scope = 3000;
 
-n_f = 300;
+n_f = 100;
 
 hop_lst(1, n_f - 1) = 0;
 

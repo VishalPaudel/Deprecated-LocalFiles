@@ -3,4 +3,4 @@ project(cppProject)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cppProject "lab_experiments/Lab 03/pointer_swapping_global_var.cpp")
+add_executable(cppProject test_folder/playground.cpp)

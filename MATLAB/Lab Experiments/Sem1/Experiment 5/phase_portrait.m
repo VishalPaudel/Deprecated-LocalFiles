@@ -26,5 +26,3 @@ quiver(x,y,u,v,'r'); figure(gcf)
 xlabel('y_1')
 ylabel('y_2')
 axis tight equal;
-
-
