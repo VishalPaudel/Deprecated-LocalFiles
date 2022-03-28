@@ -72,11 +72,11 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_cppProject: phony || CMakeFiles/cppProject.dir
 
-build CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/word_class.cpp.o: CXX_COMPILER__cppProject_Debug /Users/vishalpaudel/Documents/cppProject/lab_experiments/Lab$ 03/string_stuff/word_class.cpp || cmake_object_order_depends_target_cppProject
-  DEP_FILE = CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/word_class.cpp.o.d
+build CMakeFiles/cppProject.dir/test_folder/playground.cpp.o: CXX_COMPILER__cppProject_Debug /Users/vishalpaudel/Documents/cppProject/test_folder/playground.cpp || cmake_object_order_depends_target_cppProject
+  DEP_FILE = CMakeFiles/cppProject.dir/test_folder/playground.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17
   OBJECT_DIR = CMakeFiles/cppProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff
+  OBJECT_FILE_DIR = CMakeFiles/cppProject.dir/test_folder
 
 
 # =============================================================================
@@ -86,7 +86,7 @@ build CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/word_class.c
 #############################################
 # Link the executable cppProject
 
-build cppProject: CXX_EXECUTABLE_LINKER__cppProject_Debug CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/word_class.cpp.o
+build cppProject: CXX_EXECUTABLE_LINKER__cppProject_Debug CMakeFiles/cppProject.dir/test_folder/playground.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/cppProject.dir
   POST_BUILD = :

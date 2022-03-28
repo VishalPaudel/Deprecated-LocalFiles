@@ -33,4 +33,3 @@ for base in range(0, length_genome - 2):
     if genome[base: base+2] == start_codon:
 
 
-

@@ -3,4 +3,4 @@ project(cppProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cppProject "lab_experiments/Lab 03/string_stuff/word_class.cpp")
+add_executable(cppProject "test_folder/playground.cpp")
