@@ -1,31 +1,44 @@
 
+
 syms x y
 
 
-U = 20;
-I = 24;
+U = 4;
+I = 8;
 
 p_y = 2;
 p_x = 1;
 
-expression1 = 4 * x^0.5 + y - U;
+expression1 = @(x, y) min([x, y.^2]) - U;
 expression2 = p_x * x + p_y * y - I;
+% expression2 = @(x, y) min([x, y.^2]) - 1;
+% expression3 = @(x, y) min([x, y.^2]) - 16;
 
-f = ezplot(expression1, [0, U, 0, U]);
+expression4 = @(x, y) y^2 - x;
+
+f = ezplot(expression1, [0, 10, 0, 10]);
 hold on
-g = ezplot(expression2, [0, U, 0, U]);
-plot(16, 4, 'ok', 'LineWidth', 2)
-hold off
+g = ezplot(expression2, [0, 10, 0, 10]);
+% h = ezplot(expression3, [0, 10, 0, 10]);
+
+i = ezplot(expression4, [0, 10, 0, 10]);
+plot(4, 2, 'ok', 'LineWidth', 2)
+% plot(1, 1, 'ok', 'LineWidth', 2)
+% plot(16, 5, 'ok', 'LineWidth', 2)
+% hold off
 
 grid on;
 grid minor;
 
-title("The graph for budget equation")
-xticks((1:2:30))
-yticks((1:2:30))
+title("The budget line Intersecting the Kink Locus")
+xticks((0:2:30))
+yticks((0:2:30))
 
-set(gca,'LineWidth', 2)
-set(f, 'LineWidth', 2, 'Color', 'black', 'linestyle',':') 
-set(g, 'LineWidth', 2, 'Color', 'black') 
+xlim([0, 10])
+ylim([0, 10])
 
-legend("Utility function", "Budget Equation")
+set(f, 'LineWidth', 2, 'Color', 'black', 'linestyle','-.') 
+set(g, 'LineWidth', 2, 'Color', 'black', 'linestyle','-') 
+set(i, 'LineWidth', 2, 'Color', 'black', 'linestyle',':') 
+
+legend("Indifference Curve: U = 4", "Budget Line: 1x + 2y = 8", "Kink Locus: x = y^2")
