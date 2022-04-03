@@ -29,8 +29,8 @@ void swapping_reference(int *x, int *y) {
 
     int temp;
 
-    temp = y;
+    temp = *y;
 
-    y = x;
-    x = temp;
+    *y = *x;
+    *x = temp;
 }

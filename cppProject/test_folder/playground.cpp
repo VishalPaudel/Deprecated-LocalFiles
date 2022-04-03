@@ -1,19 +1,14 @@
-
 #include <iostream>
-
 using namespace std;
+int main() {
 
-int main()
-{
-    const int n = 3;
+//    int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+//    int (*r[10] = &a;
+//
+//    std::cout << r << " " << a;
 
-    int arr_stack[n] = {1, 2, 3};  // in the stack memory
-    int *p = arr_stack;  // pointer to the first location of the list
-
-    // adding more space, dangerously
-    p += n;
-    *p = 0;  // or simply arr_stack[n] = 0
-
-    cout << arr_stack[0] << " " << arr_stack[1]  << " "<< arr_stack[2] << " " << arr_stack[3];
+    int arr1[3] = {1,2,3}, arr[2] = {4,5,6};
+    ;
+    cout << "swap of a: " << arr1 << " swap of b: " << arr2 << endl;
     return 0;
 }

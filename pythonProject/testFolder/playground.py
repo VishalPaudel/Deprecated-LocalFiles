@@ -1,35 +1,20 @@
-genome = "TCGTGGCTCTCATTTGCTGTGAAAAACTGCACAAAATTGGCGAACTGGATGACCATTTGATGCCAGTTGGGAAGGAGACTGTTAAATACGAGGAAGAGCTGGATTTACACGATGAAGAAGAGACCAGTGTTCCAGGAAGACCAGGTTCCACAAAACGAAGACAGTGCTACCCAAAAGCAATTCCAGAATGTTTGAGGGAGAGCTACCCCAGGCCCGGTCAGCCCTGTTACCTGTACGTGATCGGAATGGTCCTGACGACACCTTTACCTGATGAGCTCAACTTCAGAAGGCGGAAGCTCTACCCCCCTGAGGACACCACAAGATGCTTTGGAATACTGACAGCCAAGCCCATACCTCAGATCCCACACTTTCCTGTGTATACGCGCTCTGGAGAGGTGACCATATCTATTGAGTTGAAGAAGTCCGGCTTCACGTTATCTCTGCAAATGCTTGAGTTGATCACAAGGCTTCACCAGTATATATTCTCACATATTCTTCGGCTTGAAAAACCTGCACTAGAATTTAAACCCACAGACGCGGACTCAGCCTACTGCGTTCTACCTCTTAATGTTGTTAATGACTCCAGCACTTTGGACATTGACTTTAAATTCATGGAAGATATCGAGAAATCTGAAGCTCGCATAGGCATTCCCAGCACAAAGTATTCAAAAGAAACTCCCTTTGTTTTCAAATTAGAAGATTACCAAGATGCAGTTATCATTCCAAGATACCGCAATTTTGATCAGCCTCATCGATTTTATGTCGCTGACGTGTACACTGATCTTACCCCCCTGAGTAAATTTCCTTCCCCTGAGTATGAAACGTTTGCGGAGTATTACAAAACAAAGTATAACCTTGACCTGACCAATCTCAACCAGCCGCTGCTGGACGTGGACCACACGTCTTCACG"
-
-A, T, G, C = 0, 0, 0, 0
-
-length_genome = len(genome)
-print(length_genome)
-
-for base in genome:
-    if base == "A":
-        A += 1
-    elif base == "T":
-        T += 1
-    elif base == "G":
-        G += 1
-    elif base == "C":
-        C += 1
-
+def partition(n, m):
+    print(f"called {n} | {m}", end=" and ")
+    if n == 1 or n == 0:
+        return 1
+    elif m > n:
+        return partition(n, n)
     else:
-        Exception("This was not supposed to happen")
+        # print('Between ', n - m, "and", n - 1)
+        sum_rec = 0
+        if n - m < 0:
+            for i_modified in range(n - 1, -1, -1):
+                sum_rec += partition(i_modified, m)
+        else:
+            for i_modified in range(n - 1, n - m - 1, -1):
+                sum_rec += partition(i_modified, m)
 
-print("A T G C count: ", A, T, G, C)
-
-
-start_codon = "ATG"
-
-stop_codon_1 = "TAA"
-stop_codon_2 = "TAG"
-stop_codon_3 = "TGA"
-
-
-for base in range(0, length_genome - 2):
-
-    if genome[base: base+2] == start_codon:
+        return sum_rec
 
 
+print(partition(3, 3))
