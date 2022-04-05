@@ -1,14 +1,83 @@
 #include <iostream>
-using namespace std;
+#include <string>
+
+class ChainNode {
+    friend class Chain;
+
+public :
+    explicit ChainNode( int element = 0, ChainNode *next = nullptr )
+    {    data = element; link = next;    }
+
+private:
+    int data;
+    ChainNode *link;
+};
+
+class Chain {
+
+private:
+        ChainNode *first;
+public:
+    Chain() {   first = nullptr;    }
+
+    void insert_begin(int);
+    void insert_end(int);
+
+    static void print_chain(Chain chain_to_print) {
+        ChainNode *tmp = chain_to_print.first;
+
+        while (tmp) {
+            std::cout << (*tmp).data << std::endl;
+            tmp = tmp->link;
+        }
+    }
+};
+
+
+void Chain::insert_end(int int_add_end) {
+    ChainNode *tmp = this->first;
+
+    if (first)
+    {
+        // Traversing to the end node
+
+        while (     (*tmp).link != nullptr     )
+        {
+            tmp = tmp->link;
+        }
+
+        tmp->link = new ChainNode(int_add_end, nullptr);
+
+        std::cout << "ADDED : the node was added at the very end of chain" << std::endl;
+    }
+
+    else
+    {
+        // Creating the new chain
+        this->first = new ChainNode(int_add_end, nullptr);
+
+        std::cout << "CREATED : new chain was created" << std::endl;
+    }
+
+};
+
+
+void Chain::insert_begin(int int_add_begin) {
+    ChainNode* tmp = new ChainNode(int_add_begin, this->first);
+
+    this->first = tmp;
+}
+
+
 int main() {
 
-//    int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-//    int (*r[10] = &a;
-//
-//    std::cout << r << " " << a;
+    Chain my_first_chain;
 
-    int arr1[3] = {1,2,3}, arr[2] = {4,5,6};
-    ;
-    cout << "swap of a: " << arr1 << " swap of b: " << arr2 << endl;
+    my_first_chain.insert_begin(16);
+    my_first_chain.insert_end(-100);
+
+    Chain::print_chain(my_first_chain);
+
     return 0;
+
 }
