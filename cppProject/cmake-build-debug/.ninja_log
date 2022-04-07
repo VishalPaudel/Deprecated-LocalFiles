@@ -1,10 +1,5 @@
 # ninja log v5
-0	67	1649052098114119820	build.ninja	e931b7665a797d68
+0	67	1649233729282622982	build.ninja	e931b7665a797d68
 0	323	1648793238853495624	CMakeFiles/cppProject.dir/main.cpp.o	ba454b6598636d9f
-2	505	1648841020022715495	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
-505	550	1648841020073292618	cppProject	3fa6c6d82d820d38
-9	523	1649052856126015585	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
-523	713	1649052856322299354	cppProject	3fa6c6d82d820d38
-2	545	1649054970813432838	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
-545	579	1649054970852582545	cppProject	3fa6c6d82d820d38
-1	1989	1649139129644094443	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+2	289	1649228026366107488	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
+289	322	1649228026402017547	cppProject	3fa6c6d82d820d38
