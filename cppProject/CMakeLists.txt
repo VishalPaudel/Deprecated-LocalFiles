@@ -4,4 +4,4 @@ project(cppProject)
 include_directories(/Library/Developer/CommandLineTools/usr/include)
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cppProject "lab_experiments/Lab 03/")
+add_executable(cppProject "lab_experiments/Lab 03/string_stuff/letter_count.cpp")
