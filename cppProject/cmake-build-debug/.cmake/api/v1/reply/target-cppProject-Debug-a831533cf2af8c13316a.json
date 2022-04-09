@@ -68,26 +68,6 @@
 			[
 				0
 			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 2,
-					"path" : "/Library/Developer/CommandLineTools/usr/include"
-				}
-			],
-			"language" : "C",
-			"sourceIndexes" : 
-			[
-				1
-			]
 		}
 	],
 	"id" : "cppProject::@6890427a1f51a3e7e1df",
@@ -119,8 +99,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -129,13 +108,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test_folder/playground.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "test_folder/playground.c",
+			"path" : "lab_experiments/Lab 03/reversing array/reverse_array_elements.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

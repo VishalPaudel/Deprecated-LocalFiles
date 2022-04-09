@@ -1,5 +1,10 @@
 # ninja log v5
-0	67	1649233729282622982	build.ninja	e931b7665a797d68
+2	529	1649451476552991788	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/reversing_array/reverse_array_elements.cpp.o	1ddb90cc7ebee8a
+2	35	1649366572131076322	CMakeFiles/cppProject.dir/test_folder/playground.c.o	cf0334e9e3cf9d04
+3	511	1649386938094642439	CMakeFiles/cppProject.dir/lab_experiments/Lab_06/linked_list_heap.cpp.o	2279e787dfe49752
+529	574	1649451476603263104	cppProject	f253c03b1722fd0b
+9	549	1649416027555520352	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
 0	323	1648793238853495624	CMakeFiles/cppProject.dir/main.cpp.o	ba454b6598636d9f
-2	289	1649228026366107488	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
-289	322	1649228026402017547	cppProject	3fa6c6d82d820d38
+1	55	1649490046906183000	build.ninja	e931b7665a797d68
+2	537	1649490146049827835	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/reversing_array/reverse_array_elements.cpp.o	1ddb90cc7ebee8a
+537	742	1649490146263752002	cppProject	f253c03b1722fd0b
