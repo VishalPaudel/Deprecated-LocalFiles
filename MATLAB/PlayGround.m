@@ -1,44 +1,17 @@
-
-
-syms x y
-
-
-U = 4;
-I = 8;
-
-p_y = 2;
-p_x = 1;
-
-expression1 = @(x, y) min([x, y.^2]) - U;
-expression2 = p_x * x + p_y * y - I;
-% expression2 = @(x, y) min([x, y.^2]) - 1;
-% expression3 = @(x, y) min([x, y.^2]) - 16;
-
-expression4 = @(x, y) y^2 - x;
-
-f = ezplot(expression1, [0, 10, 0, 10]);
+% % % b(1) = T_a,  b(2) = k
+Tfcn = @(b,t,T_0) (T_0 - b(1)).*exp(b(2).*t) + b(1);
+tv = [  0;  5; 10];
+Tv = [100; 80; 65];
+p = fminsearch(@(b) norm(Tv - Tfcn(b,tv,Tv(1))), [10; 1]);      % Estimate Parameters
+Final_T = Tfcn(p,15,Tv(1));                                     % Temperature @ 15 Minutes
+Final_t = fzero(@(t) Tfcn(p,t,Tv(1)) - 25, 1);                  % Time To Reach 25°C
+time = linspace(min(tv),Final_t);
+Tfit = Tfcn(p,time,Tv(1));
+figure
+plot(tv, Tv, 'p')
 hold on
-g = ezplot(expression2, [0, 10, 0, 10]);
-% h = ezplot(expression3, [0, 10, 0, 10]);
-
-i = ezplot(expression4, [0, 10, 0, 10]);
-plot(4, 2, 'ok', 'LineWidth', 2)
-% plot(1, 1, 'ok', 'LineWidth', 2)
-% plot(16, 5, 'ok', 'LineWidth', 2)
-% hold off
-
-grid on;
-grid minor;
-
-title("The budget line Intersecting the Kink Locus")
-xticks((0:2:30))
-yticks((0:2:30))
-
-xlim([0, 10])
-ylim([0, 10])
-
-set(f, 'LineWidth', 2, 'Color', 'black', 'linestyle','-.') 
-set(g, 'LineWidth', 2, 'Color', 'black', 'linestyle','-') 
-set(i, 'LineWidth', 2, 'Color', 'black', 'linestyle',':') 
-
-legend("Indifference Curve: U = 4", "Budget Line: 1x + 2y = 8", "Kink Locus: x = y^2")
+plot(time, Tfit, '-r')
+hold off
+grid
+xlabel('Time (min)')
+ylabel('T (°C)')
