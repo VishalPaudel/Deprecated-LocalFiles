@@ -2,6 +2,7 @@
 lst_main = [3, 4, 1, 2]
 lst_side = [1, 4, 2, 3]
 
+
 def bubble_sort(temp_lst_main, temp_lst_side, bool_mute=False):
     """
     This function is the normal replication of bubble sort algorithm. <wiki_link>.
