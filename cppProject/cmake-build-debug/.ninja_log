@@ -1,16 +1,4 @@
 # ninja log v5
-1	34	1650122172537239116	build.ninja	e931b7665a797d68
-0	467	1649516832057068739	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
-3	511	1649386938094642439	CMakeFiles/cppProject.dir/lab_experiments/Lab_06/linked_list_heap.cpp.o	2279e787dfe49752
-1	1951	1649503553290729206	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/letter_count.cpp.o	9775a89ea28411ff
-2	531	1649515135002087554	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/crude_caesar_cypher.cpp.o	d1a8754de7c9aeef
-505	554	1650122151701645437	cppProject	7f4b8a4c1b366dc5
-0	72	1649516753340893805	CMakeFiles/cppProject.dir/test_folder/playground.c.o	cf0334e9e3cf9d04
-2	482	1649514861747467535	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/standard_string_functions.cpp.o	cf8a20efc14fc555
-2	537	1649490146049827835	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/reversing_array/reverse_array_elements.cpp.o	1ddb90cc7ebee8a
-7	497	1649517102760136732	CMakeFiles/cppProject.dir/lab_experiments/Lab_03/string_stuff/unicode_representation.cpp.o	18e2fbfdc423eb72
-0	323	1648793238853495624	CMakeFiles/cppProject.dir/main.cpp.o	ba454b6598636d9f
-2	505	1650122151647631220	CMakeFiles/cppProject.dir/personal_projects/driver_code.cpp.o	7cf73416895c8ebd
-0	49	1650122172537239116	build.ninja	e931b7665a797d68
+0	49	1650715033740361292	build.ninja	e931b7665a797d68
 0	241	1650122172783743310	CMakeFiles/cppProject.dir/test_folder/playground.cpp.o	cb4160d69a10a8f8
 241	271	1650122172815795180	cppProject	3fa6c6d82d820d38

@@ -7,14 +7,16 @@
 #ifndef LINKED_LISTS_H
 #define LINKED_LISTS_H
 
+#include <iostream>
+using namespace std;
+
+
 // Defining the dynamic class type: ChainNode, representing the nodes
 class ChainNode {
     friend class Chain;
 
 public :
-    explicit ChainNode(int element = 0, ChainNode *next = nullptr) {
-        // I don't know why I am using the explicit keyword, the IDE suggested it,
-        // it was suggested by the IDE for single element declarations
+    ChainNode(int element = 0, ChainNode *next = 0) {
         data = element;
         link = next;
     }
@@ -47,6 +49,8 @@ public:
 
     // void insert_next_to(ChainNode &, int &);  // Need to finish this code
 
+    void remove(int);
+
     static void print_chain(const Chain &chain_to_print) {
         std::cout << "Starting to print the chain " << chain_to_print.name_of_chain << ":" << std::endl;
 
@@ -65,6 +69,16 @@ public:
             chain_to_change.name_of_chain = str_new_name;
         } else {
             std::cout << "It already has this name" << std::endl;
+        }
+    }
+
+    ~Chain() {      // destructor
+        // front to back destruction of a Chain object
+        ChainNode *tmp;
+        while (this->first != NULL) {
+            tmp = first->link;
+            delete first;
+            first = tmp;
         }
     }
 
