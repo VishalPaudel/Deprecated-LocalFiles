@@ -27,7 +27,7 @@ private:
 
 public:
 
-    ChainNode(int element = 0, ChainNode *next = 0)  // constructor for a ChainNode object
+    ChainNode(int element = 0, ChainNode *next = nullptr)  // constructor for a ChainNode object
     {
         data = element;
         link = next;
@@ -48,7 +48,7 @@ public:
 
     Chain() {
         first = NULL;
-        name_of_chain = "N/A : No Name Provided while execution";
+        name_of_chain = "NO-NAME";
     } // constructor for a Chain object
 
     void insert_begin(int);
@@ -65,7 +65,7 @@ public:
         ChainNode *tmp = chain_to_print.first;
 
         // The following traversal has been repeated many times in the code, need to make a new Method Attribute
-        while (tmp) {
+        while (tmp != nullptr) {
             std::cout << "-*-  " << (*tmp).data << "  -*-";
             tmp = tmp->link;
         }
@@ -83,7 +83,7 @@ public:
     ~Chain() {      // destructor
         // front to back destruction of a Chain object
         ChainNode *tmp;
-        while (this->first != NULL) {
+        while (this->first != nullptr) {
             tmp = first->link;
             delete first;
             first = tmp;
@@ -134,20 +134,26 @@ void Chain::insert_end(int int_add_end) {
 
 void Chain::remove(int x) {
 
-    ChainNode *tmp = this->first;  // a pointer to ChainNode object, particularly the first ChainNode of the Chain object
+    ChainNode *tmp = this->first;  // pointer to the first node of the Chain object
 
-    while (this->first != NULL && (this->first)->data == x) {
+    // Loop removes a beginning strip of x's from the Chain 'this'
+    while (this->first != nullptr && (this->first)->data == x) {
 
-        this->first = (this->first)->link;
-        delete tmp;
-        tmp = first;
+        // loop runs till either the first of the chain does not have x as data
+        // or the chain totally is erased, (this->first == nullptr)
+
+        this->first = (this->first)->link;  // changing where the head points to
+        delete tmp;  // deleting the earlier first, which had a value of x stored
+        tmp = this->first;  // resetting the tmp pointer to the new chain first
     }
 
-    if (this->first == NULL) { return; }
+    // If the chain was initially a chain of x's
+    if (this->first == nullptr) { return; }
 
-    ChainNode *prev = this->first;  // an intermediate node, a temporary swapper
+    ChainNode *prev = this->first;  // a new intermediate node, a temporary swapper
 
-    while (tmp != NULL) {
+    // Loop runs to remove all x's that come somewhere inside the stripped chain
+    while (tmp != nullptr) {
         if (tmp->data == x) {
             prev->link = tmp->link;
             delete tmp;
