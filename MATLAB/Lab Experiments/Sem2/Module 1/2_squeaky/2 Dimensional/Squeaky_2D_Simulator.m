@@ -36,7 +36,7 @@ function [num_steps_to_death, directional_death] = Squeaky_2D_Simulator(start_po
     
             else
                 disp("This is unexpected!")
-                exit
+                return
             end
     
         elseif move_y_or_x > 0
@@ -58,11 +58,11 @@ function [num_steps_to_death, directional_death] = Squeaky_2D_Simulator(start_po
     
             else
                 disp("This is unexpected!")
-                exit
+                return
             end
         else
             disp("This is unexpected!")
-            exit
+            return
     
         end
     
