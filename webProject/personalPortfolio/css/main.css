@@ -12,7 +12,9 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #ffffff;
+  background-color: black;
+  font-family: "Open Sans", Courier, sans-serif;
   font-size: 1em;
   line-height: 1.4;
 }
