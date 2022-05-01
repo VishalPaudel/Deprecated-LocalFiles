@@ -8,9 +8,11 @@
 All the different files and learnings on my device' *Documents* folder.
 
 
-# Owner: Vishal Paudel 🤦‍♂️
+## Owner: Vishal Paudel 🤦‍♂️
+
 ## Contact: 
 <VishalPaudel876@gmail.com>
+
 <VishalPaudel@yandex.com>
 
 🐠
